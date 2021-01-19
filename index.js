@@ -326,7 +326,7 @@ function vowelCounter(string) {
 
     return numberOfVowels;
 }
-
+console.log('stretch ' + vowelCounter('abcdefghijklmnopqrstuvwxyz'));
 
 
 
