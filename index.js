@@ -75,7 +75,7 @@ Do the following:
 */
 
 function multiply(a, b){
-    return(a*b)
+    return a*b;
   }
 multiply(5,3)
 
