@@ -176,10 +176,47 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+
 function game(user, computer){
-    /*add your code here*/
+  let computerPick
+  const userPick = user.toLowerCase();
+
+  // if (computer >= 0 && computer <= 0.3333) {
+  //   computerPick = 'paper';
+  // } 
+  // else if (computer > 0.3333 && computer <= 0.6666) {
+  //   computerPick = 'rock';
+  // }
+  // else if (computer > 0.6666 && computer <= 1) {
+  //   computerPick = 'scissors';
+  // }
+
+  if (userPick === computer) {
+    return "it's a tie";
+  }
+  else {
+    if (userPick === 'rock' && computer === 'scissors') {
+      return "you win!";
+    }
+    else if (userPick === 'rock' && computer === 'paper') {
+      return "you lose!";
+    } 
+    else if (userPick === 'paper' && computer === 'rock') {
+      return "you win!";
+    }
+    else if (userPick === 'paper' && computer === 'scissors') {
+      return "you lose!";
+    }
+    else if (userPick === 'scissors' && computer === 'rock'){
+      return "you lose!";
+    }
+    else if (userPick === 'scissors' && computer === 'paper') {
+      return "you win!"
+    }
+  }
 }
-  
+console.log(game("paper",Math.random()));
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -193,7 +230,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
     /*add your code here*/
   }
 
