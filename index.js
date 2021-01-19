@@ -176,21 +176,20 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computerPick = Math.random();
+let computer = null;
+if (computerPick >= 0 && computerPick <= 0.3333) {
+  computer = 'paper';
+} 
+else if (computerPick > 0.3333 && computerPick <= 0.6666) {
+  computer = 'rock';
+}
+else if (computerPick > 0.6666 && computerPick <= 1) {
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  let computerPick
   const userPick = user.toLowerCase();
-
-  // if (computer >= 0 && computer <= 0.3333) {
-  //   computerPick = 'paper';
-  // } 
-  // else if (computer > 0.3333 && computer <= 0.6666) {
-  //   computerPick = 'rock';
-  // }
-  // else if (computer > 0.6666 && computer <= 1) {
-  //   computerPick = 'scissors';
-  // }
-
   if (userPick === computer) {
     return "it's a tie";
   }
@@ -215,7 +214,6 @@ function game(user, computer){
     }
   }
 }
-console.log(game("paper",Math.random()));
 
   
 
