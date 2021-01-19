@@ -89,9 +89,9 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+let age = 4
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -123,11 +123,37 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+let dogWeight = 15;
+let dogAge = 1
+function hungryDog(dogWeight, dogAge){  
+  if (dogAge >= 1) {
+      if (dogWeight <= 5) {
+        return dogWeight * .05;
+      } 
+      else if (dogWeight > 5 && dogWeight < 11) {
+        return dogWeight * .04;
+      }
+      else if (dogWeight >= 11 && dogWeight <= 15) {
+        return dogWeight * .03;
+      }
+      else if (dogWeight > 15) {
+        return dogWeight * .02;
+      }
+    }
+  else {
+    if (dogAge >= (2/12) && dogAge < (4/12)) {
+      return dogWeight * .1;
+    }
+    else if (dogAge >= (4/12) && dogAge < (7/12)) {
+      return dogWeight * .05;
+    }
+    else if (dogAge >= (7/12) && dogAge < (12/12)) {
+      return dogWeight * .04;
+    }
   }
+}
 
-
+console.log(hungryDog(dogWeight, dogAge));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
